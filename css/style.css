@@ -1,0 +1,56 @@
+#gameBoard{
+	background-color: #cfcfcf;
+	width: 1000px;
+	height: 1000px;
+}
+
+.card{
+	border: 1px solid black;
+	float: left;
+	height: 200px;
+	width: 200px;
+	margin: 10px;
+}
+
+.cardFaceDown{
+	background-image: url("../images/background.jpeg") !important; 
+	/*background-color: darkred ;*/
+
+}
+
+.firstPair{
+	background-image: url("../images/1.jpg");
+	background-repeat: no-repeat; 
+	background-position: center;
+
+}
+
+.secondPair{
+	background-image: url("../images/2.jpg");
+	background-repeat: no-repeat; 
+	background-position: center; 
+}
+
+.thirdPair{
+	background-image: url("../images/3.jpg"); 
+	background-repeat: no-repeat; 
+	background-position: center;
+}
+
+.forthPair{
+	background-image: url("../images/4.jpg"); 
+	background-repeat: no-repeat; 
+	background-position: center;
+}
+
+.fifthPair{
+	background-image: url("../images/5.jpg"); 
+	background-repeat: no-repeat; 
+	background-position: center;
+}
+
+.sixthPair{
+	background-image: url("../images/6.jpg"); 
+	background-repeat: no-repeat; 
+	background-position: center;
+}
