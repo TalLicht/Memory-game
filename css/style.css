@@ -13,9 +13,7 @@
 }
 
 .cardFaceDown{
-	background-image: url("../images/background.jpeg") !important; 
-	/*background-color: darkred ;*/
-
+	background-image: url("../images/background.jpg") !important; 
 }
 
 .firstPair{
@@ -53,4 +51,8 @@
 	background-image: url("../images/6.jpg"); 
 	background-repeat: no-repeat; 
 	background-position: center;
+}
+
+#theModal{
+	display: none;
 }

@@ -1,12 +1,16 @@
-var numOfImgs = 12;
+var numOfCards = 12;
+var clickCounter = 0, pairsCounter = [];
+var firstCardId = 0, secondCardId = 0, firstCard="", secondCard = "";
 var gameBoard = document.getElementById("gameBoard");
+var ableToFlip = true;
 function Game(){
 	
 };
 
-for (var i=0 ; i < numOfImgs ; i++){
+for (var i = 1 ; i <= numOfCards ; i++){
 	var imgHolder = document.createElement('div');
 	gameBoard.appendChild(imgHolder);
+	imgHolder.setAttribute("id", [i]);
 	imgHolder.setAttribute("class", "card cardFaceDown");
 
 };
@@ -33,8 +37,8 @@ for (var i = 0; i < cardsArray.length; i++){
 
 
 function flipCards(e){
+  if (ableToFlip){
 	var newClass = "";
-	console.log(this);
     var self = this.className.split(' ');
 	for(var j = 0; j < self.length ; j++){
 		if(self[j] != "cardFaceDown"){
@@ -42,10 +46,36 @@ function flipCards(e){
 	    }
     }
     this.setAttribute("class", newClass);
+    clickCounter ++;
+    if (clickCounter === 1){
+        firstCard = this.className;
+        firstCardId = this.id;
+    }
+    if (clickCounter === 2){
+    	ableToFlip = false;
+    	secondCard = this.className;
+    	secondCardId = this.id;
+
+      if(firstCard == secondCard){
+      	pairsCounter.push("pair");
+      	clickCounter = 0;
+      }
+      else {
+      	setTimeout(function(){
+           document.getElementById(firstCardId).classList.add("cardFaceDown");
+           document.getElementById(secondCardId).classList.add("cardFaceDown");
+           clickCounter = 0;
+      	}, 1000);
+      }
+      if(pairsCounter.length == (numOfCards/2)){
+      	console.log(pairsCounter.length);
+      	document.getElementById("theModal").style.display = "block";
+      }
+      setTimeout(function(){
+        	ableToFlip = true;
+      	}, 1000);
+      return this;
+    }
+  }
 };
-
-
-
-
-
 
