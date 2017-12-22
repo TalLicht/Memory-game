@@ -1,11 +1,18 @@
 body{
 	font-family: 'Kaushan Script';
-	background-color: #cfcfcf;
+	background-image: url("../images/jungle.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    width: 100%;
+    height: 100%;
+    color: white;
 }
 
 button{
 	border-radius: 10px;
 	border: thin solid black;
+	margin: 0 20px;
+	padding: 0 20px;
 }
 
 #header{
@@ -14,25 +21,51 @@ button{
 }
 
 #newGame{
-	 margin-left: 20px;
-	 margin-top: 35px;
-	 font-size: 30px;
-	 border-radius: 10px;
-	 vertical-align: top;
-	 bir
+	margin-left: 20px;
+	margin-top: 30px;
+	font-size: 30px;
+	border-radius: 10px;
+	vertical-align: top;
+	background-color: black;
 }
 
 #title{
-	 font-family: 'Luckiest Guy';
-	 font-size: 90px;
-	 margin-left: 210px;
+	font-family: 'Luckiest Guy';
+	font-size: 90px;
+	margin-left: 210px;
 }
 
 #wrongGuesses{
-   transform: translateX(-150%);
-   font-size: 30px;
-   margin-left: 160px; 
-   margin-top: 30px;
+    transform: translateX(-150%);
+    font-size: 30px;
+    margin-left: 160px; 
+    margin-top: 30px;
+}
+
+#levelsModal{
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 150px; 
+    top: 0;
+    width: 60%; 
+    height: 50%;
+    color: black;
+    font-size: 40px;
+    transform: translateX(35%);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+.btns{
+    background-color: #d3d2d0;
 }
 
 #gameBoard{
@@ -50,48 +83,55 @@ button{
 }
 
 .cardFaceDown{
-	background-image: url("../images/background.jpg") !important; 
+	background-image: url("../images/backside1.jpg") !important; 
+	background-size: cover;
 }
 
 .firstPair{
 	background-image: url("../images/1.jpg");
 	background-repeat: no-repeat; 
 	background-position: center;
-
+	background-size: cover;
 }
 
 .secondPair{
 	background-image: url("../images/2.jpg");
 	background-repeat: no-repeat; 
 	background-position: center; 
+	background-size: cover;
 }
 
 .thirdPair{
 	background-image: url("../images/3.jpg"); 
 	background-repeat: no-repeat; 
 	background-position: center;
+	background-size: cover;
 }
 
 .forthPair{
 	background-image: url("../images/4.jpg"); 
 	background-repeat: no-repeat; 
 	background-position: center;
+	background-size: cover;
 }
 
 .fifthPair{
 	background-image: url("../images/5.jpg"); 
 	background-repeat: no-repeat; 
 	background-position: center;
+	background-size: cover;
 }
 
 .sixthPair{
 	background-image: url("../images/6.jpg"); 
 	background-repeat: no-repeat; 
 	background-position: center;
+	background-size: cover;
 }
 
 #theModal{
 	display: none;
 	font-size: 40px;
 	text-align: center;
+	color: black;
 }

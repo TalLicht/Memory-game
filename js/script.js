@@ -4,15 +4,43 @@ var firstCardId = 0, secondCardId = 0, firstCard="", secondCard = "";
 var gameBoard = document.getElementById("gameBoard");
 var ableToFlip = true;
 var pairsArr = ["firstPair","firstPair","secondPair","secondPair","thirdPair","thirdPair","forthPair","forthPair","fifthPair","fifthPair","sixthPair","sixthPair"];
-document.getElementById("newGame").addEventListener("click",createBoard);
-document.getElementById("newGameModal").addEventListener("click",createBoard);
+//window.addEventListener("load",level);
+document.getElementById("newGame").addEventListener("click",level);
+document.getElementById("newGameModal").addEventListener("click",level);
 
 function Game(){
 	
 };
 
+function level(e){
+	document.getElementById("levelsModal").style.display = "block";
+	document.getElementById("easy").addEventListener("click",function(){
+       numOfCards = 12;
+       createBoard();
+	});
+	document.getElementById("medium").addEventListener("click",function(){
+       numOfCards = 30;
+       createBoard();
+       document.getElementById("gameBoard").style.margin = "auto 100px";
+	});
+	document.getElementById("hard").addEventListener("click",function(){
+       numOfCards = 36;
+       createBoard();
+       document.getElementById("gameBoard").style.margin = "auto";
+	});
+}
+
+function pickBackSide(){
+
+}
+
+function picktheme(){
+
+}
+
 //Game.prototype.createBoard = function(){
 function createBoard(){
+	document.getElementById("levelsModal").style.display = "none";
 	document.getElementById("theModal").style.display = "none";
 	gameBoard.innerHTML = "";
 	wrongGuessesCount = 0;
@@ -62,6 +90,8 @@ function flipCards(e){
       if(firstCard == secondCard){
       	pairsCounter.push("pair");
       	clickCounter = 0;
+      	ableToFlip = true;
+      	removeClick();
       }
       else {
       	setTimeout(function(){
@@ -76,7 +106,7 @@ function flipCards(e){
       if(pairsCounter.length == (numOfCards/2)){
       	document.getElementById("theModal").style.display = "block";
       	var wrongGuesses = localStorage.getItem('numOfWrongGuesses');
-      	document.getElementById("modalBodyText").innerHTML = "You had " + wrongGuesses + " wrong gusses.";
+      	document.getElementById("modalBodyText").innerHTML = "You had " + wrongGuesses + " wrong gusses";
       }
       setTimeout(function(){
         	ableToFlip = true;
@@ -86,3 +116,7 @@ function flipCards(e){
   }
 };
 
+function removeClick(){
+	document.getElementById(firstCardId).removeEventListener("click",flipCards);
+    document.getElementById(secondCardId).removeEventListener("click",flipCards);
+};
