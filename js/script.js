@@ -1,34 +1,35 @@
 var aud = document.getElementById("myAudio");
-var aud2 = document.getElementById("myAudio");
 var numOfCards = 12;
 var clickCounter = 0, wrongGuessesCount = 0, pairsCounter = [];
 var firstCardId = 0, secondCardId = 0, firstCard="", secondCard = "";
 var gameBoard = document.getElementById("gameBoard");
 var ableToFlip = true;
+var image =  document.getElementById("sound");
 var pairsArr = ["firstPair","firstPair","secondPair","secondPair","thirdPair","thirdPair","forthPair","forthPair","fifthPair","fifthPair","sixthPair","sixthPair"];
-//window.addEventListener("load",level);
 document.getElementById("newGame").addEventListener("click",createBoard);
 document.getElementById("newGameModal").addEventListener("click",createBoard);
+document.getElementById("pauseMusic").addEventListener("click",mute);
 
-function Game(){
-	
-};
+function mute(){
+  if (image.getAttribute('src') == "images/volumeOn.png"){
+      image.src = "images/mute.png";
+      aud.pause();
+  }
+  else {
+        image.src = "images/volumeOn.png";
+        aud.play();
+  }
+}
+function pickBackSide(){
 
+}
 
-// function pickBackSide(){
-
-// }
-
-// function picktheme(){
-
-// }
-
-//Game.prototype.createBoard = function(){
 function createBoard(){
-	aud.pause();
+	  aud.pause();
     aud.innerHTML = "<source src='I Just Cant Wait To Be King.mp3' type='audio/mp3'>";
     aud.load();
     aud.play();
+  // }
 	document.getElementById("theModal").style.display = "none";
 	gameBoard.innerHTML = "";
 	wrongGuessesCount = 0;
@@ -95,10 +96,11 @@ function flipCards(e){
       	localStorage.setItem('numOfWrongGuesses',wrongGuessesCount);
       }
       if(pairsCounter.length == (numOfCards/2)){
-      	aud.pause();
-      	aud.innerHTML = "<source src='cheers.wav' type='audio/wav'>";
-      	aud.load();
-      	aud.play();
+        	aud.pause();
+        	aud.innerHTML = "<source src='cheers.wav' type='audio/wav'>";
+        	aud.load();
+        	aud.play();
+        // }
       	document.getElementById("theModal").style.display = "block";
       	var wrongGuesses = localStorage.getItem('numOfWrongGuesses');
       	document.getElementById("modalBodyText").innerHTML = "You had " + wrongGuesses + " wrong gusses";

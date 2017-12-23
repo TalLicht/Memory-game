@@ -1,5 +1,5 @@
 body{
-	font-family: 'Kaushan Script';
+	font-family: 'Kaushan Script','Ariel';
 	background-image: url("../images/jungle.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -32,16 +32,28 @@ button{
 }
 
 #title{
-	font-family: 'Luckiest Guy';
+	font-family: 'Luckiest Guy','Ariel';
 	font-size: 90px;
-	margin-left: 210px;
+	margin-left: 180px;
+}
+
+.rightSide{
+    display: inline-block;
+}
+
+#pauseMusic{
+	margin-top: auto;
+	margin-left: 330px;
+}
+
+#sound{
+	height: 20px;
+	width: 20px;
 }
 
 #wrongGuesses{
-    transform: translateX(-150%);
-    font-size: 30px;
-    margin-left: 160px; 
-    margin-top: 30px;
+   font-size: 40px; 
+   margin-left: 30px;
 }
 
 #themeModal{
