@@ -6,6 +6,7 @@ body{
     width: 100%;
     height: 100%;
     color: white;
+    overflow: hidden;
 }
 
 button{
@@ -16,8 +17,9 @@ button{
 }
 
 #header{
+	top: o;
 	margin-bottom: 0;
-	height: 110px;
+	height: 90px;
 }
 
 #newGame{
@@ -42,7 +44,7 @@ button{
     margin-top: 30px;
 }
 
-#levelsModal{
+#themeModal{
     display: none; 
     position: fixed; 
     z-index: 1; 
@@ -55,22 +57,36 @@ button{
     transform: translateX(35%);
 }
 
-.modal-content {
+#backSideModal{
+	display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 150px; 
+    top: 0;
+    width: 60%; 
+    height: 50%;
+    color: black;
+    font-size: 40px;
+    transform: translateX(35%);
+}
+
+#backSideModal .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 40px;
+    padding: 0;
     border: 1px solid #888;
     width: 80%;
     text-align: center;
 }
 
-.btns{
-    background-color: #d3d2d0;
+#backSideModal .modal-content button{
+    height: 200px;
+    width: 150px; 
 }
 
 #gameBoard{
 	transform: translateX(5%);
-	margin: auto 200px;
+	margin: auto;
 	text-align: center;
 }
 
@@ -78,8 +94,9 @@ button{
 	border: 1px solid black;
 	float: left;
 	height: 200px;
-	width: 200px;
-	margin: 10px;
+	width: 300px;
+	margin: 8px;
+	background-size: cover;
 }
 
 .cardFaceDown{
@@ -88,45 +105,31 @@ button{
 }
 
 .firstPair{
-	background-image: url("../images/1.jpg");
-	background-repeat: no-repeat; 
-	background-position: center;
-	background-size: cover;
+	background-image: url("../images/gif1.gif");
 }
 
 .secondPair{
-	background-image: url("../images/2.jpg");
-	background-repeat: no-repeat; 
-	background-position: center; 
-	background-size: cover;
+	background-image: url("../images/gif2.gif");	
 }
 
 .thirdPair{
-	background-image: url("../images/3.jpg"); 
-	background-repeat: no-repeat; 
+	background-image: url("../images/gif3.gif"); 
 	background-position: center;
-	background-size: cover;
 }
 
 .forthPair{
-	background-image: url("../images/4.jpg"); 
-	background-repeat: no-repeat; 
+	background-image: url("../images/gif4.gif"); 
 	background-position: center;
-	background-size: cover;
 }
 
 .fifthPair{
-	background-image: url("../images/5.jpg"); 
-	background-repeat: no-repeat; 
+	background-image: url("../images/gif5.gif"); 
 	background-position: center;
-	background-size: cover;
 }
 
 .sixthPair{
-	background-image: url("../images/6.jpg"); 
-	background-repeat: no-repeat; 
+	background-image: url("../images/gif6.gif"); 
 	background-position: center;
-	background-size: cover;
 }
 
 #theModal{

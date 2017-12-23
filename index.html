@@ -13,19 +13,30 @@
 </head>
 <body>
 	<div id="memoryGame">
+		<audio id="myAudio"></audio>
+		<button id="pauseMusic"></button>
 		<div id="header">
 			<button id="newGame">New Game</button>
 	       <span id="title">Memory game</span>
 	       <span id="wrongGuesses">wrong guesses: </span>
 		</div>
-		<div id="levelsModal">
+<!-- 		<div id="backSideModal">
 			<div class="modal-content">
-			    Choose the game level</br>
-		        <button type="button" id="easy" class="btns" value="easy">Easy</button>
-		        <button type="button" id="medium" class="btns" value="medium">Medium</button>
-		        <button type="button" id="hard" class="btns" value="hard">Hard</button>
+			    Choose the back of the cards</br>
+		        <button type="button" id="backSide1" style="background-image: url('images/backside1.jpg'); background-size: cover;">
+		        </button>
+		        <button type="button" id="backSide2" style="background-image: url('images/backside2.png'); background-size: cover;">
+		        </button>
+		        <button type="button" id="backSide3" style="background-image: url('images/backside3.jpg'); background-size: cover;">
+		        </button>
+		        <button type="button" id="backSide4" style="background-image: url('images/backside4.png'); background-size: cover;">
+		        </button>
+		        <button type="button" id="backSide5" style="background-image: url('images/backside5.jpg'); background-size: cover;">
+		        </button>
+		        <button type="button" id="backSide6" style="background-image: url('images/backside6.jpeg'); background-size: cover;">
+		        </button>
 	    	</div>
-		</div>
+		</div> -->
 		<div id="gameBoard">
 		</div>
 		<div id="theModal" class="modal" tabindex="-1" role="dialog">
@@ -33,6 +44,7 @@
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <h5 class="modal-title" style="font-size: 60px;">You Won!</h5>
+		        <img src="images/trophy.jpg" alt="trophy image" style="height: 100px;width: 100px;">
 		      </div>
 		      <div id="modalBodyText" class="modal-body">
 		      </div>
