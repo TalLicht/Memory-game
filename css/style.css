@@ -115,17 +115,20 @@ button{
 @media screen and (max-width: 400px)
 		{
 			body{
-				height: 500px;
-				width: 400px
+				height: 660px;
+				width: 375px
+			}
+			button{
+				padding: 0 5px;
 			}
 			#header{
-				height: 100px;
+				height: 50px;
 				margin-bottom: auto;
 			}
 			#newGame{
 				margin-left: 10px;
 				margin-top: 5px;
-				font-size: 12px;
+				font-size: 15px;
 				border-radius: 10px;
 				vertical-align: top;
 				background-color: black;
@@ -133,39 +136,39 @@ button{
             }
             #title{
 				font-family: 'Luckiest Guy','Ariel';
-				font-size: 50px;
-				margin-left: 10px;
+				font-size: 45px;
+				margin-left: 25px;
 				margin-top: 0px;
 				display: flex;
 				color: red;
             }
             #pauseMusic{
-				margin-top: auto;
-				margin-left: 330px;
+				margin-left: 340px;
 				display: flex;
 				position: absolute;
-				top: 10px;
+				top: 5px;
 			}
 			#sound{
 				height: 10px;
 				width: 10px;
 			}
 			#wrongGuesses{
-			   font-size: 15px; 
-			   margin-left: 150px;
+			   font-size: 20px; 
+			   margin-left: 130px;
 			   position: absolute;
 			   top: 75px;
 			}
 			#gameBoard{
-				transform: translateX(4%);
-				margin-top: 0;
+				transform: translateX(2%);
 				text-align: center;
+				margin-top: 60px;
+				width: 370px;
 			}
 			.card{
 				border: 1px solid black;
 				float: left;
-				height: 60px;
-				width: 180px;
+				height: 85px;
+				width: 175px;
 				margin: 2px;
 				background-size: cover;
 			}
